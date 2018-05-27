@@ -135,11 +135,6 @@ execute ' creamos usuario de BBDD para wordpress ' do
 command "mysql -e \"GRANT ALL PRIVILEGES ON #{node['main']['nombredb']}.* TO '#{node['main']['userdb']}'@'localhost' IDENTIFIED BY '#{node['main']['passuserdb']}';\""
 end
 
-#execute 'Crear fichero marca' do
-#command 'touch /home/vagrant/wordpress/flag.txt'
-#not_if { ::File.exists? '/home/vagrant/wordpress/flag.txt' }
-#end
-
 
 ####################
 # Wordpress final
